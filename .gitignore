@@ -1,0 +1,39 @@
+/out
+/*.tar.gz
+.~lock.*
+
+
+# pycharm local files
+.idea/
+
+# jupiter notebook local files
+.ipynb_checkpoints/
+
+
+# R local files
+
+
+.Ruserda
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+*-Ex.R
+/*.Rcheck/
+.Rproj.user/
+Rplots.pdf
+
+
+# Latex local files
+
+*.aux
+*.log
+*.out
+*.spl
+*.synctex.gz
+*.blg
+*.dvi
+*.bbl
+*.tex.bak
+
+
