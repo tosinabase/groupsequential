@@ -1,31 +1,10 @@
-# The usage example
+# Two-step usage example
 
 source("./normal/plan.R")
 source("./normal/characteristics.R")
-
-
-plan_summary <- function(test, M, l0, l1, th0, th1, costs, cost_fn) {
-
-  result_list = list(
-    "lambda0" = l0,
-    "lambda1" = l1,
-    "theta0" = th0,
-    "theta1" = th1,
-    "M" = M,
-    "N" = length(M),
-    "alpha" = 1 - operating_characteristic(test, th0),
-    "beta" = operating_characteristic(test, th1),
-    "AGN0" = average_sampling_cost(test, th0, cost_fn=function (x) 1),
-    "AGN1" = average_sampling_cost(test, th1, cost_fn=function (x) 1),
-    "ASN0" = average_sampling_cost(test, th0, costs),
-    "ASN1" = average_sampling_cost(test, th1, costs)
-  )
-  return (result_list)
-}
-
 print("An example of optimal plan computation")
-# input parameters:
 
+# input parameters:
 # hypothesized values:
   th0 <- 0             # theta0
   th1 <- 0.21          # theta1
