@@ -142,39 +142,3 @@ if(N>1)
 
   v + cost_fn(M[1], 1)
 }
-if(sys.nframe()==0){
-  source("./optimal_plan/binomial/plan.R")
-  cost<-function(n){
-c0=0
-c1=1
-c1*n+c0}
-# cost<-function(n){
-# n}
-
-l0=160
-l1=160
-th0=0.4
-th1=0.6
-# gsizes=seq(1,37,2)
-  M=rep(30,5)
-print("group sequential")
-test=calculate_plan(M,l0,l1,th0,th1, gamma=0.5)
-#   MC(test,th0,100000)
-alpha=1-operating_characteristic(test,th0)
- asn0=average_sample_number(test,th0)
- beta=operating_characteristic(test,th1)
- asn1=average_sample_number(test,th1)
-
-  print(paste(alpha,beta,asn0,asn1))
-print(l0*alpha+l1*beta+asn0+asn1)
-  #
-  #
-  #   MC(test,th1,100000)
-
-# 5 groups
-# test
-
-
-
-
-}
