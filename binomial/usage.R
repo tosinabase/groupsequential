@@ -32,7 +32,7 @@ if (sys.nframe() == 0){
 
   # input parameters can be set here
 
-  cost_fn = function (M){M}
+  cost_fn = function (M, k){M}
 
   M <- c(100)
   l0 <- 30
