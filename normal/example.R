@@ -30,8 +30,8 @@ beta <- operating_characteristic(test, th1)
 print(paste("alpha:", alpha, ", beta:", beta))
 # [1] "alpha: 0.0250017679625842 , beta: 0.200056694872385"
 
-ASN0 <- average_sampling_cost(test, th0, cost_fn=cost_fn)
-ASN1 <- average_sampling_cost(test, th1, cost_fn=cost_fn)
+ASN0 <- expected_sampling_cost(test, th0, cost_fn=cost_fn)
+ASN1 <- expected_sampling_cost(test, th1, cost_fn=cost_fn)
 print(paste("ASN0:", ASN0, ", ASN1:", ASN1))
 # [1] "ASN0: 118.489308233436 , ASN1: 148.471027781829"
 

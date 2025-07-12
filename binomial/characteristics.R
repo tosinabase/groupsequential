@@ -96,7 +96,7 @@ if(N>1)
   v + M[1]
 }
 
-average_sample_cost <- function(test, th, cost_fn=function(x, k) x) {
+expected_sampling_cost <- function(test, th, cost_fn=function(x, k) x) {
 
   M = test[["info"]]$M
   N = length(M)

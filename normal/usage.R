@@ -17,12 +17,12 @@ plan_summary <- function(test, M, l0, l1, th0, th1, costs, cost_fn) {
     "N" = length(M),
     "alpha" = 1 - operating_characteristic(test, th0),
     "beta" = operating_characteristic(test, th1),
-    "AGN0" = average_sampling_cost(test, th0, cost_fn=function (x) 1),
-    "AGN1" = average_sampling_cost(test, th1, cost_fn=function (x) 1),
-    "ASN0" = average_sampling_cost(test, th0, costs=M),
-    "ASN1" = average_sampling_cost(test, th1, costs=M),
-    "ASС0" = average_sampling_cost(test, th0, costs, cost_fn),
-    "ASС1" = average_sampling_cost(test, th1, costs, cost_fn)
+    "AGN0" = expected_sampling_cost(test, th0, cost_fn=function (x) 1),
+    "AGN1" = expected_sampling_cost(test, th1, cost_fn=function (x) 1),
+    "ASN0" = expected_sampling_cost(test, th0, costs=M),
+    "ASN1" = expected_sampling_cost(test, th1, costs=M),
+    "ASС0" = expected_sampling_cost(test, th0, costs, cost_fn),
+    "ASС1" = expected_sampling_cost(test, th1, costs, cost_fn)
   )
   return (result_list)
 }

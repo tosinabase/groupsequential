@@ -74,7 +74,7 @@ operating_characteristic <- function(test, th) {
 }
 
 
-average_sampling_cost <- function(test, th, costs=NULL, cost_fn=NULL){
+expected_sampling_cost <- function(test, th, costs=NULL, cost_fn=NULL){
   # costs is the vector of group costs
   # If costs=NULL the parameter test[["info"]]$costs will be used.
 
@@ -172,7 +172,7 @@ prob_to_stop_after <- function(k, test, th){
 
 asc_using_prob_to_stop_after <- function(test, th, costs=NULL, cost_fn=NULL){
   # Average sampling cost, realized through prob_to_stop_after,
-  # computationally not perfect but can be used for testing prob_to_stop_after or average_sampling_cost
+  # computationally not perfect but can be used for testing prob_to_stop_after or expected_sampling_cost
 
   M = test[["info"]]$M
   N = test[["info"]]$N

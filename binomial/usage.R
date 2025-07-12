@@ -20,10 +20,10 @@ plan_summary <- function(test, M, l0, l1, th0, th1, gam, thgam, cost_fn) {
     "beta" = operating_characteristic(test, th1),
     "ASN0" = average_sample_number(test, th0),
     "ASN1" = average_sample_number(test, th1),
-    "ASC0" = average_sample_cost(test, th0, cost_fn=cost_fn),
-    "ASC1" = average_sample_cost(test, th1, cost_fn=cost_fn),
-    "Aver."=  (average_sample_cost(test, th0, cost_fn=cost_fn)+
-               average_sample_cost(test, th1, cost_fn=cost_fn))/2
+    "ASC0" = expected_sampling_cost(test, th0, cost_fn=cost_fn),
+    "ASC1" = expected_sampling_cost(test, th1, cost_fn=cost_fn),
+    "Aver."=  (expected_sampling_cost(test, th0, cost_fn=cost_fn)+
+               expected_sampling_cost(test, th1, cost_fn=cost_fn))/2
   )
   return (result_list)
 }
